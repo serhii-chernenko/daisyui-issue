@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: [
     '@demo/ui',
@@ -6,7 +5,6 @@ export default defineNuxtConfig({
   ],
   modules: ['@nuxt/eslint'],
   devtools: { enabled: true },
-
   future: {
     compatibilityVersion: 4,
   },
