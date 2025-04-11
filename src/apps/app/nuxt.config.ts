@@ -1,4 +1,7 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { createResolver } from '@nuxt/kit'
+
+const { resolve } = createResolver(import.meta.url)
+
 export default defineNuxtConfig({
   extends: [
     '@demo/ui',
@@ -6,6 +9,7 @@ export default defineNuxtConfig({
   ],
   modules: ['@nuxt/eslint'],
   devtools: { enabled: true },
+  css: [resolve('./fix.css')],
 
   future: {
     compatibilityVersion: 4,

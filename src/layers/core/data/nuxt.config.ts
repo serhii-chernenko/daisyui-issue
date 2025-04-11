@@ -1,7 +1,12 @@
+import { createResolver } from '@nuxt/kit'
+
+const { resolve } = createResolver(import.meta.url)
+
 export default defineNuxtConfig({
   extends: ['@demo/integration-cloudflare', '@demo/ui'],
   modules: ['@nuxt/eslint'],
   devtools: { enabled: true },
+  css: [resolve('./fix.css')],
   runtimeConfig: {
     public: {
       itemsLimit: 5,
